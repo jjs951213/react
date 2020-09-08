@@ -1,8 +1,9 @@
 import React from 'react';
-import Say from './Say';
+import Say from './EventPractice';
+import EventPractice from './EventPractice';
  
 const App = () => {
-  return <Say />;
+  return <EventPractice />;
 };
  
 export default App;
