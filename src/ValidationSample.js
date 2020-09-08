@@ -19,7 +19,7 @@ handleChange = (e) => {
 
 
 
-handleButtonClick => () => {
+handleButtonClick = () => {
     this.setState({
       clicked: true,
       validated: this.state.password === '0000'
