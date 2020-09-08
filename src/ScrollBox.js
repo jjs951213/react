@@ -13,8 +13,7 @@ class ScrollBox extends Component {
 
 
 
-<span class="co50">const</span><span class="cd2"> innerStyle </span><span class="co40">=</span><span class="cd2"> {</span>
-
+    const innerStyle ={
 
       width: '100%',
       height: '650px',
@@ -22,9 +21,7 @@ class ScrollBox extends Component {
     }
 
 
-
-<span class="co50">return</span><span class="cd2"> (</span>
-
+    return(
 
       <div 
         style={style}
