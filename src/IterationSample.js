@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
- 
+
+
 const IterationSample = () => {
   const [names, setNames] = useState([
     { id: 1, text: '눈사람' },
@@ -10,8 +11,20 @@ const IterationSample = () => {
   const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(5); // 새로운 항목을 추가할 때 사용할 id
  
-  const namesList = names.map(name => <li key={name.id}>{name.text}</li>);
-  return <ul>{namesList}</ul>;
+  const onChange = e => setInputText(e.target.value);
+
+
+
+const namesList = names.map(name => <li key={name.id}>{name.text}</li>);
+  return (
+    <>
+      <input value={inputText} onChange={onChange} />
+      <button>추가</button>
+      <ul>{namesList}</ul>
+    </>
+  );
 };
- 
+
+
+
 export default IterationSample;
