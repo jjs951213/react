@@ -22,7 +22,7 @@ constructor(props) {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps'); 
-    if(nextProps.color != = prevState.color) {
+    if(nextProps.color !== prevState.color) {
       return { color: nextProps.color };
     }
     return null;
@@ -39,7 +39,7 @@ componentDidMount() {
 shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextProps, nextState);
     // 숫자의 마지막 자리가 4면 리렌더링하지 않습니다.
-    return nextState.number % 10 != = 4;
+    return nextState.number % 10 !== 4;
   }
 
 
@@ -60,7 +60,7 @@ handleClick = () => {
 
 getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('getSnapshotBeforeUpdate');
-    if(prevProps.color != = this.props.color) {
+    if(prevProps.color !== this.props.color) {
       return this.myRef.style.color;
     }
     return null;
