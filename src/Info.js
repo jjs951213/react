@@ -1,28 +1,14 @@
-import React, { useReducer } from 'react';
-
-
-function reducer(state, action) {
-  return {
-     [action.name]: action.value,
-     [action.nickname]: action.value
-  };
-}
-
-
-
+import React from 'react';
+import useInputs from './useInputs';
+ 
 const Info = () => {
-  const [state, dispatch] = useReducer(reducer, {
+  const [state, onChange] = useInputs({
     name: '',
     nickname: ''
   });
   const { name, nickname } = state;
-  const onChange = e => {
-    dispatch(e.target);
-  };
-
-
-
-return (
+ 
+  return (
     <div>
       <div>
         <input name="name" value={name} onChange={onChange} />
@@ -40,7 +26,5 @@ return (
     </div>
   );
 };
-
-
-
+ 
 export default Info;
