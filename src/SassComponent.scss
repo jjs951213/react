@@ -1,3 +1,9 @@
+.SassComponent {
+    display: flex;
+    background: $oc-gray-2;
+    @include media('<768px') {
+      background: $oc-gray-9;
+
 // 변수 사용하기
 $red: #fa5252;
 $orange: #fd7e14;
