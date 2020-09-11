@@ -3,8 +3,13 @@ import React, { useReducer } from 'react';
 
 function reducer(state, action) {
   return {
+<<<<<<< HEAD
     [state.name] : state.value,
     [action.name]: action.value
+=======
+     [action.name]: action.value,
+     [action.nickname]: action.value
+>>>>>>> parent of fa8243e... 9.1 가장 흔한 방식, 일반 css
   };
 }
 
